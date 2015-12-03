@@ -1,0 +1,71 @@
+﻿<Window x:Class="PasseiOuRodei.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PasseiOuRodei"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="248.585" Width="387.637">
+    <Grid>
+        <CheckBox x:Name="checkMateria" 
+                  Content="Sabia a matéria." 
+                  HorizontalAlignment="Left" 
+                  Margin="52,157,0,0" 
+                  VerticalAlignment="Top"
+                  Checked="Materia_Checked"/>
+        <CheckBox x:Name="checkEstudei" 
+                  Content="Estudei." 
+                  HorizontalAlignment="Left" 
+                  Margin="52,124,0,0" 
+                  VerticalAlignment="Top"
+                  Checked="Estudei_Checked"/>
+        <CheckBox x:Name="checkColei" 
+                  Content="Colei na loucura." 
+                  HorizontalAlignment="Left" 
+                  Margin="52,90,0,0" 
+                  VerticalAlignment="Top"
+                  Checked="Colei_Checked"/>
+        <CheckBox x:Name="checkAulas" 
+                  Content="Frequentei as aulas." 
+                  HorizontalAlignment="Left" 
+                  Margin="52,55,0,0" 
+                  VerticalAlignment="Top"
+                  Checked="Aulas_Checked"/>
+        <Button x:Name="btnChecar" 
+                Content="Checar" 
+                HorizontalAlignment="Left" 
+                Margin="239,109,0,0" 
+                VerticalAlignment="Top" 
+                Width="98" Click="btnChecar_Click"/>
+        <TextBox x:Name="txtResult" 
+                 HorizontalAlignment="Left" 
+                 Height="22" Margin="239,55,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="98" 
+                 TextAlignment="Center" 
+                 FontWeight="Bold" Foreground="{x:Null}" BorderBrush="#FFF90000" CaretBrush="Black" Background="Black"/>
+        <Button x:Name="btnClear" 
+        	    Content="Limpar Tudo" 
+        	    HorizontalAlignment="Left" 
+        	    Margin="239,158,0,0" 
+        	    VerticalAlignment="Top" 
+        	    Width="98" 
+                Click="btnClear_Click"/>
+        <TextBlock x:Name="textBlock" 
+        	HorizontalAlignment="Center" 
+        	Margin="0,10,-0.4,169.2" 
+        	TextWrapping="Wrap" 
+        	VerticalAlignment="Center" 
+        	Height="40" 
+        	Width="382" FontWeight="Bold" TextAlignment="Center" Background="Black" Foreground="Red" LineHeight="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarThumbWidthKey}}" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Foreground="#FF00FF0C"/><LineBreak/><Run Foreground="#FF00FF0C" Text="PASSEI"/><Run Text=" OU "/><Run Text="RODEI"/><Run Text="?"/></TextBlock>
+    </Grid>
+</Window>
