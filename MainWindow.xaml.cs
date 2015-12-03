@@ -34,7 +34,7 @@ namespace PasseiOuRodei
             quesitColei = checkColei.IsChecked == true ? true : false;
             quesitEstudei = checkEstudei.IsChecked == true ? true : false;
 
-            saida = quesitMateria || (quesitAulas && quesitEstudei) || (!quesitAulas && !quesitEstudei) && quesitColei;
+            saida = quesitMateria || (quesitAulas && quesitEstudei) || (!quesitAulas && !quesitEstudei) && quesitColei || quesitColei;
             if (saida == true)
             {
                 txtResult.Foreground = new SolidColorBrush(Colors.Green);
