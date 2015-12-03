@@ -11,32 +11,29 @@
                   Content="Sabia a matéria." 
                   HorizontalAlignment="Left" 
                   Margin="52,157,0,0" 
-                  VerticalAlignment="Top"
-                  Checked="Materia_Checked"/>
+                  VerticalAlignment="Top"/>
         <CheckBox x:Name="checkEstudei" 
                   Content="Estudei." 
                   HorizontalAlignment="Left" 
                   Margin="52,124,0,0" 
-                  VerticalAlignment="Top"
-                  Checked="Estudei_Checked"/>
+                  VerticalAlignment="Top"/>
         <CheckBox x:Name="checkColei" 
                   Content="Colei na loucura." 
                   HorizontalAlignment="Left" 
                   Margin="52,90,0,0" 
-                  VerticalAlignment="Top"
-                  Checked="Colei_Checked"/>
+                  VerticalAlignment="Top"/>
         <CheckBox x:Name="checkAulas" 
                   Content="Frequentei as aulas." 
                   HorizontalAlignment="Left" 
                   Margin="52,55,0,0" 
-                  VerticalAlignment="Top"
-                  Checked="Aulas_Checked"/>
+                  VerticalAlignment="Top"/>
         <Button x:Name="btnChecar" 
                 Content="Checar" 
                 HorizontalAlignment="Left" 
                 Margin="239,109,0,0" 
                 VerticalAlignment="Top" 
-                Width="98" Click="btnChecar_Click"/>
+                Width="98" 
+                Click="btnChecar_Click"/>
         <TextBox x:Name="txtResult" 
                  HorizontalAlignment="Left" 
                  Height="22" Margin="239,55,0,0" 
@@ -44,7 +41,11 @@
                  VerticalAlignment="Top" 
                  Width="98" 
                  TextAlignment="Center" 
-                 FontWeight="Bold" Foreground="{x:Null}" BorderBrush="#FFF90000" CaretBrush="Black" Background="Black"/>
+                 FontWeight="Bold" 
+                 Foreground="{x:Null}" 
+                 BorderBrush="#FFF90000" 
+                 CaretBrush="Black" 
+                 Background="Black"/>
         <Button x:Name="btnClear" 
         	    Content="Limpar Tudo" 
         	    HorizontalAlignment="Left" 
@@ -58,7 +59,12 @@
         	TextWrapping="Wrap" 
         	VerticalAlignment="Center" 
         	Height="40" 
-        	Width="382" FontWeight="Bold" TextAlignment="Center" Background="Black" Foreground="Red" LineHeight="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarThumbWidthKey}}" RenderTransformOrigin="0.5,0.5">
+        	Width="382" 
+            FontWeight="Bold" 
+            TextAlignment="Center" 
+            Background="Black" 
+            Foreground="Red" 
+            LineHeight="{DynamicResource {x:Static SystemParameters.HorizontalScrollBarThumbWidthKey}}" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

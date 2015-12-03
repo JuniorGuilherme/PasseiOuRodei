@@ -27,21 +27,14 @@ namespace PasseiOuRodei
             InitializeComponent();
         }
 
-        private void Materia_Checked(object sender, RoutedEventArgs e)
-        {
-            if (checkMateria.IsEnabled)
-            {
-                quesitMateria = true;
-            }
-            else
-            {
-                quesitMateria = false;
-            }
-        }
-
         private void btnChecar_Click(object sender, RoutedEventArgs e)
         {
-            saida = quesitMateria || quesitAulas && quesitEstudei || !quesitAulas && !quesitEstudei && quesitColei;
+            quesitMateria = checkMateria.IsChecked == true ? true : false;
+            quesitAulas = checkAulas.IsChecked == true ? true : false;
+            quesitColei = checkColei.IsChecked == true ? true : false;
+            quesitEstudei = checkEstudei.IsChecked == true ? true : false;
+
+            saida = quesitMateria || (quesitAulas && quesitEstudei) || (!quesitAulas && !quesitEstudei) && quesitColei;
             if (saida == true)
             {
                 txtResult.Foreground = new SolidColorBrush(Colors.Green);
@@ -63,42 +56,6 @@ namespace PasseiOuRodei
             checkColei.IsChecked = false;
             saida = false;
 
-        }
-
-        private void Aulas_Checked(object sender, RoutedEventArgs e)
-        {
-            if (checkAulas.IsEnabled)
-            {
-                quesitAulas = true;
-            }
-            else
-            {
-                quesitAulas = false;
-            }
-        }
-
-        private void Colei_Checked(object sender, RoutedEventArgs e)
-        {
-            if (checkColei.IsEnabled)
-            {
-                quesitColei = true;
-            }
-            else
-            {
-                quesitColei = false;
-            }
-        }
-
-        private void Estudei_Checked(object sender, RoutedEventArgs e)
-        {
-            if (checkEstudei.IsEnabled)
-            {
-                quesitEstudei = true;
-            }
-            else
-            {
-                quesitEstudei = false;
-            }
         }
     }
 }
